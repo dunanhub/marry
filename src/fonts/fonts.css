@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'main';
-    src: url(KZ_Dusha.ttf);
+    src: url(src/fonts/KZ_Dusha.ttf);
 }
 @font-face {
     font-family: 'kz';
@@ -8,5 +8,5 @@
 }
 @font-face {
     font-family: 'kz2';
-    src: url(KZ_Mon_Amour_One.ttf);
+    src: url(src/fonts/KZ_Mon_Amour_One.ttf);
 }
