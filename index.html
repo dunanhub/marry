@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ТОЙ</title>
     
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="/src/css/style.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -49,22 +49,22 @@
     </style>
 </head>
 <body>
-    <div class="first__block flex relative w-full h-screen place-content-between items-center border-b-3 border-[#BC8958]">
+    <!-- <div class="first__block flex relative w-full h-screen place-content-between items-center border-b-3 border-[#BC8958]">
         <div class="left__block w-[50%] grid grid-cols-2 grid-rows-2 gap-2">
-            <img src="src/img/image.svg" class="w-90">
-            <img src="src/img/image.svg" class="w-90">
-            <img src="src/img/image.svg" class="w-90">
-            <img src="src/img/image.svg" class="w-90">
+            <img src="/src/img/image.svg" class="w-90">
+            <img src="/src/img/image.svg" class="w-90">
+            <img src="/src/img/image.svg" class="w-90">
+            <img src="/src/img/image.svg" class="w-90">
         </div>
         <div class="right__block flex flex-col w-[50%] h-full place-content-center items-center text-center"> 
             <span class="block absolute bottom-0 right-0 z-10">
-                <img class="rotate-180" src="src/img/flower.png" alt="flower">
+                <img class="rotate-180" src="/src/img/flower.png" alt="flower">
             </span>
             <span class="block absolute bottom-10 right-130 z-10">
-                <img class="rotate-y-180 w-34" src="src/img/butterfly.png" alt="flower">
+                <img class="rotate-y-180 w-34" src="/src/img/butterfly.png" alt="flower">
             </span>
             <span class="block absolute top-20 right-60 z-10">
-                <img class="rotate-y-0 w-20" src="src/img/butterfly.png" alt="flower">
+                <img class="rotate-y-0 w-20" src="/src/img/butterfly.png" alt="flower">
             </span>
             <div class="text__block">
                 <div class="relative text-6xl text-[#BC8958] font-['kz'] mb-14 tracking-widest">
@@ -88,11 +88,191 @@
                 <button class="play-button" onclick="toggleAudio()">
                     <i id="play-icon" class="bi bi-play-circle-fill text-8xl"></i>
                 </button>
-                <audio id="audio" src="src/audio/ambient-128950.mp3"></audio>
+                <audio id="audio" src="/src/audio/ambient-128950.mp3"></audio>
             </div>
         </div>
-    </div>
-    <div class="flex justify-between items-center p-10 w-full">
+    </div> -->
+    <div class="first__block flex flex-col md:flex-row max-sm:flex-row relative w-full h-auto md:h-screen max-sm:h-auto place-content-between items-center border-b-2 border-[#BC895A]">
+        <div class="left__block w-full md:w-[50%] max-sm:w-auto grid grid-cols-2 md:grid-cols-2 max-sm:grid-cols-1 grid-rows-2 md:grid-rows-2 max-sm:grid-rows-4 ">
+            <img src="/src/img/image.svg" class="w-full max-sm:w-40">
+            <img src="/src/img/image.svg" class="w-full max-sm:w-40">
+            <img src="/src/img/image.svg" class="w-full max-sm:w-40">
+            <img src="/src/img/image.svg" class="w-full max-sm:w-40">
+        </div>
+        <div class="right__block flex flex-col w-full md:w-[50%] h-full md:h-auto place-content-center items-center text-center"> 
+            <span class="block absolute bottom-0 right-0 z-10">
+                <img class="rotate-180 max-sm:w-35" src="/src/img/flower.png" alt="flower">
+            </span>
+            <span class="block absolute bottom-10 right-130 z-10 max-sm:bottom-15 max-sm:right-55">
+                <img class="rotate-y-180 w-34 max-sm:w-12" src="/src/img/butterfly.png" alt="flower">
+            </span>
+            <span class="block absolute top-20 right-60 z-10 max-sm:top-4 max-sm:right-20">
+                <img class="rotate-y-0 w-20 max-sm:w-10" src="/src/img/butterfly.png" alt="flower">
+            </span>
+            <div class="text__block">
+                <div class="relative text-6xl md:text-5xl max-sm:text-3xl text-[#BC8958] font-['kz'] mb-10 tracking-widest">
+                    Султан - Меруерт
+                </div>
+                <div class="text-4xl md:text-3xl max-sm:text-xl text-[#BC8958] pb-4 border-b-2">ҮЙЛЕНУ ТОЙЫ</div>
+                <div class="mt-2 text-4xl md:text-3xl max-sm:text-xl text-[#BC8958]">10.08.2025</div>
+            </div>
+            <div class="sound__block">
+                <svg class="rotating-text max-sm:w-[100px] max-sm:h-[90px] max-sm:-mt-1" width="160" height="140" viewBox="0 0 200 200">
+                    <defs>
+                        <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+                    </defs>
+                    <text font-size="16" sm:font-size="12" font-family="Arial" fill="black" letter-spacing="2">
+                        <textPath href="#circlePath" startOffset="0%">
+                            Әуен • Әуен • Әуен • Әуен • Әуен • Әуен • Әуен • 
+                        </textPath>
+                    </text>
+                </svg>
+                <button class="play-button" onclick="toggleAudio()">
+                    <i id="play-icon" class="bi bi-play-circle-fill text-7xl max-sm:text-5xl"></i>
+                </button>
+                <audio id="audio" src="/src/audio/ambient-128950.mp3"></audio>
+            </div>
+        </div>
+    </div>  
+    <div class="flex max-sm:flex-col justify-between items-center p-10 w-full">
+        <div class="w-[52.5%] max-sm:w-full font-['main'] text-center text-zinc-800">
+            <h2 class="text-4xl max-sm:text-2xl mb-12 tracking-wider">ҚҰРМЕТТІ ҚОНАҚТАР!</h2>
+            <h2 class="text-2xl max-sm:text-xl tracking-wider">СІЗДЕРДІ</h2>
+            <h1 class="w-full max-sm:w-auto mx-auto text-left max-sm:text-center text-5xl max-sm:text-2xl -mt-6 max-sm:-mt-4 mb-6 py-4 font-['kz'] tracking-widest text-[#BC8958] border-b-2">Султан мен Меруерттің</h1>    
+            <p class="text-2xl max-sm:text-xl w-[80%] max-sm:w-full mx-auto tracking-wider">ҮЙЛЕНУ ТОЙЫНА АРНАЛҒАН САЛТАНАТТЫ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!</p>
+            <div class="flex flex-col items-center justify-center font-['kz2'] mt-8">
+                <h3 class="text-3xl max-sm:text-2xl">Той иелері:</h3>
+                <h2 class="text-4xl max-sm:text-3xl font-['kz'] text-[#BC8958] mt-2 mb-6">Нурсипат - Бибигуль</h2>
+            </div>   
+        </div>
+        <div class="flex max-sm:flex-col flex-row items-center justify-center w-[60%] max-sm:w-full">
+            <div class="flex flex-col items-center justify-center w-[50%] max-sm:w-full max-sm:mt-10">
+                <h3 class="text-2xl max-sm:text-xl">ТОЙ САЛТАНАТЫ:</h3>
+                <h1 class="text-2xl max-sm:text-xl font-['kz'] text-[#BC8958] border-b-2">10 тамыз 2025 жылы</h1>
+                <div class="grid grid-cols-1 grid-rows-6 gap-2 mt-8 max-sm:text-xl">
+                    <div class="flex flex-row font-bold border-b-1 border-[#ddb07c]">
+                        <span class="block text-center w-8">ДС</span>
+                        <span class="block text-center w-8">СС</span>
+                        <span class="block text-center w-8">СР</span>
+                        <span class="block text-center w-8">БС</span>
+                        <span class="block text-center w-8">ЖМ</span>
+                        <span class="block text-center w-8">СБ</span>
+                        <span class="block text-center w-8">ЖС</span>
+                    </div>
+                    <div class="flex flex-row">
+                        <span class="block text-center w-8 text-[transparent]">28</span>
+                        <span class="block text-center w-8 text-[transparent]">29</span>
+                        <span class="block text-center w-8 text-[transparent]">30</span>
+                        <span class="block text-center w-8 text-[transparent]">31</span>
+                        <span class="block text-center w-8">1</span>
+                        <span class="block text-center w-8">2</span>
+                        <span class="block text-center w-8">3</span>
+                    </div>
+                    <div class="flex flex-row">
+                        <span class="block text-center pt-[0.2rem] w-8">4</span>
+                        <span class="block text-center pt-[0.2rem] w-8">5</span>
+                        <span class="block text-center pt-[0.2rem] w-8">6</span>
+                        <span class="block text-center pt-[0.2rem] w-8">7</span>
+                        <span class="block text-center pt-[0.2rem] w-8">8</span>
+                        <span class="block text-center pt-[0.2rem] w-8">9</span>
+                        <span class="block text-center py-[0.1rem] px-[0.3rem] font-bold border-3 rounded-full border-[#ddb07c]">10</span>
+                    </div>
+                    <div class="flex flex-row">
+                        <span class="block text-center w-8">11</span>
+                        <span class="block text-center w-8">12</span>
+                        <span class="block text-center w-8">13</span>
+                        <span class="block text-center w-8">14</span>
+                        <span class="block text-center w-8">15</span>
+                        <span class="block text-center w-8">16</span>
+                        <span class="block text-center w-8">17</span>
+                    </div>
+                    <div class="flex flex-row">
+                        <span class="block text-center w-8">18</span>
+                        <span class="block text-center w-8">19</span>
+                        <span class="block text-center w-8">20</span>
+                        <span class="block text-center w-8">21</span>
+                        <span class="block text-center w-8">22</span>
+                        <span class="block text-center w-8">23</span>
+                        <span class="block text-center w-8">24</span>
+                    </div>
+                    <div class="flex flex-row">
+                        <span class="block text-center w-8">25</span>
+                        <span class="block text-center w-8">26</span>
+                        <span class="block text-center w-8">27</span>
+                        <span class="block text-center w-8">28</span>
+                        <span class="block text-center w-8">29</span>
+                        <span class="block text-center w-8">30</span>
+                        <span class="block text-center w-8">31</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center items-center w-[50%] max-sm:w-full max-sm:mt-10">
+                <div class="flex flex-col items-center justify-center font-['kz2']">
+                    <h3 class="text-2xl max-sm:text-2xl">Басталуы:</h3>
+                    <h2 class="text-3xl max-sm:text-2xl font-['kz'] text-[#BC8958] mt-2 mb-6">19:00 - де</h2>
+                    <h3 class="text-2xl max-sm:text-xl text-center">Уақытылы келулеріңізді сұраймыз</h3>
+                </div>
+                <div class="w-full">
+                    <svg class="mb-4 mt-12 w-full" width="100%" height="20" viewBox="95 5 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="fadeLine1" x1="0%" y1="50%" x2="50%" y2="50%">
+                                <stop offset="0%" stop-color="#718975" stop-opacity="0" />
+                                <stop offset="100%" stop-color="#718975" />
+                            </linearGradient>
+                            <linearGradient id="fadeLine2" x1="50%" y1="50%" x2="100%" y2="50%">
+                                <stop offset="0%" stop-color="#718975" />
+                                <stop offset="100%" stop-color="#718975" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <ellipse cx="47" cy="10" rx="50" ry="1.5" fill="url(#fadeLine1)" />
+                        <ellipse cx="153" cy="10" rx="50" ry="1.5" fill="url(#fadeLine2)" />
+                        <circle cx="100" cy="10" r="3" fill="#718975" />
+                    </svg>
+                    
+
+                    <h2 class="text-center text-2xl max-sm:text-xl font-['kz2'] mb-4">Той салтанатына дейін:</h2>
+                    <ul class="flex flex-row justify-center items-center font-['kz2']">
+                        <li class="flex flex-col justify-center items-center h-20">
+                            <span id="days" class="text-2xl max-sm:text-xl pl-3 pr-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
+                            <span class="text-xl max-sm:text-lg">күн</span>
+                        </li>
+                        <li class="flex flex-col justify-start items-center h-30 pt-6 px-3 font-['main'] text-4xl max-sm:text-3xl text-[#718975]">:</li>
+                        <li class="flex flex-col justify-center items-center">
+                            <span id="hours" class="text-2xl max-sm:text-xl pl-3 pr-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
+                            <span class="text-xl max-sm:text-lg">сағат</span>
+                        </li>
+                        <li class="flex flex-col justify-start items-center h-30 pt-6 px-3 font-['main'] text-4xl max-sm:text-3xl text-[#718975]">:</li>
+                        <li class="flex flex-col justify-center items-center">
+                            <span id="minutes" class="text-2xl max-sm:text-xl pl-3 pr-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
+                            <span class="text-xl max-sm:text-lg">минут</span>
+                        </li>
+                        <li class="flex flex-col justify-start items-center h-30 pt-6 px-3 font-['main'] text-4xl max-sm:text-3xl text-[#718975]">:</li>
+                        <li class="flex flex-col justify-center items-center">
+                            <span id="seconds" class="text-2xl max-sm:text-xl pl-3 pr-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
+                            <span class="text-xl max-sm:text-lg">секунд</span>
+                        </li>
+                    </ul>
+
+                    <svg class="my-4 w-full" width="100%" height="20" viewBox="95 5 10 10" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="fadeLine1" x1="0%" y1="50%" x2="50%" y2="50%">
+                                <stop offset="0%" stop-color="#718975" stop-opacity="0" />
+                                <stop offset="100%" stop-color="#718975" />
+                            </linearGradient>
+                            <linearGradient id="fadeLine2" x1="50%" y1="50%" x2="100%" y2="50%">
+                                <stop offset="0%" stop-color="#718975" />
+                                <stop offset="100%" stop-color="#718975" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+                        <ellipse cx="47" cy="10" rx="50" ry="1.5" fill="url(#fadeLine1)" />
+                        <ellipse cx="153" cy="10" rx="50" ry="1.5" fill="url(#fadeLine2)" />
+                        <circle cx="100" cy="10" r="3" fill="#718975" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- <div class="flex justify-between items-center p-10 w-full">
         <div class="w-[52.5%] font-['main'] text-center text-zinc-800">
             <h2 class="text-4xl mb-12 tracking-wider">ҚҰРМЕТТІ ҚОНАҚТАР!</h2>
             <h2 class="text-2xl tracking-wider">СІЗДЕРДІ</h2>
@@ -229,16 +409,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>     -->
     <div class="w-full flex justify-center items-center">
-        <span class="block w-full h-2 bg-[#718975] rounded-tr-sm rounded-br-sm"></span>
+        <span class="block w-full h-2 max-sm:h-1 bg-[#718975] rounded-tr-sm rounded-br-sm"></span>
         <div class="w-[80%] flex justify-center items-center">
-            <img src="src/img/flowers.png">
+            <img src="/src/img/flowers.png">
         </div>
-        <span class="block w-full h-2 bg-[#718975] rounded-tl-sm rounded-bl-sm"></span>
+        <span class="block w-full h-2 max-sm:h-1 bg-[#718975] rounded-tl-sm rounded-bl-sm"></span>
     </div>
-    <div class="flex justify-around items-center p-10 w-full">
-        <div class="flex flex-col justify-center items-center w-[50%]">
+    <div class="flex max-sm:flex-col justify-around items-center p-10 w-full">
+        <div class="flex flex-col justify-center items-center w-[50%] max-sm:w-full">
             <svg class="my-4 w-full" width="100%" height="20" viewBox="95 5 10 10" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="fadeLine1" x1="0%" y1="50%" x2="50%" y2="50%">
@@ -254,9 +434,9 @@
                 <ellipse cx="153" cy="10" rx="50" ry="1.5" fill="url(#fadeLine2)" />
                 <circle cx="100" cy="10" r="3" fill="#718975" />
             </svg>
-            <div class="flex flex-col items-center justify-center font-['kz2'] my-4 w-[50%] text-center">
-                <h3 class="text-3xl">Мекен-жайымыз:</h3>
-                <h2 class="text-4xl font-['kz'] text-[#BC8958] mt-2 mb-6">Ақтөбе қаласы, "Аты жоқ"</h2>
+            <div class="flex flex-col items-center justify-center font-['kz2'] my-4 w-[50%] max-sm:w-full text-center">
+                <h3 class="text-3xl max-sm:text-2xl">Мекен-жайымыз:</h3>
+                <h2 class="text-4xl max-sm:text-2xl font-['kz'] text-[#BC8958] mt-2 mb-6">Ақтөбе қаласы, "Аты жоқ"</h2>
             </div> 
             <svg class="my-4 w-full" width="100%" height="20" viewBox="95 5 10 10" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -274,34 +454,34 @@
                 <circle cx="100" cy="10" r="3" fill="#718975" />
             </svg>
         </div>
-        <div class="flex relative justify-center items-center w-auto">
-            <img class="absolute -top-10 -right-20 rotate-45 w-40" src="src/img/flowers.png">
-            <img class="absolute -top-14 -left-8 rotate-y-180 w-26" src="src/img/butterfly.gif">
-            <p class="w-100 bg-[#718975] text-white text-center text-xl font-['main'] tracking-widest p-10 rounded-sm">ТОЙ БАҒДАРЛАМАСЫ БАЛАЛАРҒА АРНАЛМАҒАНДЫҚТАН ЖӘНЕДЕ СІЗДЕРГЕ ЫҢҒАЙЛЫ БОЛУЫ ҮШІН, УАҚЫТТЫ КӨНІЛДІ ӨТКІЗУ МАҚСАТЫҢДА БАЛАЛАРСЫЗ КЕЛУІҢІЗДІ СҰРАЙМЫЗ!</p>
-            <img class="absolute -bottom-10 -left-20 rotate-225 w-40" src="src/img/flowers.png">
+        <div class="flex relative justify-center items-center w-auto max-sm:w-[80%] max-sm:mt-8">
+            <img class="absolute -top-10 -right-20 max-sm:-right-15 rotate-45 w-40 max-sm:w-30" src="/src/img/flowers.png">
+            <img class="absolute -top-14 max-sm:-top-8 -left-8 max-sm:-left-6 rotate-y-180 w-26 max-sm:w-16" src="/src/img/butterfly.gif">
+            <p class="w-100 max-sm:w-auto bg-[#718975] text-white text-center text-xl max-sm:text-base font-['main'] tracking-widest p-10 rounded-sm">ТОЙ БАҒДАРЛАМАСЫ БАЛАЛАРҒА АРНАЛМАҒАНДЫҚТАН ЖӘНЕДЕ СІЗДЕРГЕ ЫҢҒАЙЛЫ БОЛУЫ ҮШІН, УАҚЫТТЫ КӨНІЛДІ ӨТКІЗУ МАҚСАТЫҢДА БАЛАЛАРСЫЗ КЕЛУІҢІЗДІ СҰРАЙМЫЗ!</p>
+            <img class="absolute -bottom-10 -left-20 max-sm:-left-15 rotate-225 w-40 max-sm:w-30" src="/src/img/flowers.png">
         </div>
     </div>
-    <div class="flex flex-col justify-center items-center w-full">
-        <form id="rsvpForm" class="flex flex-col justify-center items-center w-[50%] p-10 text-center">
-            <h2 class="text-3xl font-['kz'] mb-10">Тойға қатысуыңызды растауыңызды сұраймыз!</h2>
-            <p class="text-sm w-150 text-[#718975] font-bold tracking-wider">
+    <div class="flex flex-col justify-center items-center w-full max-sm:w-screen">
+        <form id="rsvpForm" class="flex flex-col justify-center items-center w-[50%] max-sm:w-full p-10 text-center">
+            <h2 class="text-3xl max-sm:text-xl font-['kz'] mb-10">Тойға қатысуыңызды растауыңызды сұраймыз!</h2>
+            <p class="text-sm max-sm:text-xs w-150 max-sm:w-full text-[#718975] font-bold tracking-wider">
                 АТЫ-ЖӨНІҢІЗ (ЖҰБАЙЫҢЫЗБЕН КЕЛЕТІН БОЛСАҢЫЗ, ЕКЕУІҢІЗДІҢ ДЕ АТЫҢЫЗДЫ ЖАЗУЫҢЫЗДЫ ӨТІНЕМІЗ)
             </p>
             <input type="text" name="name" id="name" class="w-full py-2 px-6 border-2 rounded text-[#BC8958] mt-2 mb-6 font-bold"
                 placeholder="Аты-жөніңіз" required>
-            <label for="select" class="text-sm w-150 text-[#718975] font-bold tracking-wider">ҚАТЫСУЫҢЫЗ</label>
+            <label for="select" class="text-sm max-sm:text-xs w-150 max-sm:w-full max-sm:text-left text-[#718975] font-bold tracking-wider">ҚАТЫСУЫҢЫЗ</label>
             <select name="select" id="select" class="w-full py-2 px-6 border-2 rounded text-[#BC8958] mt-2 mb-6 font-bold">
-                <option value="Қатысамын">Қатысамын</option>
-                <option value="Жұбайыммен барамын">Жұбайыммен барамын</option>
-                <option value="Өкінішке орай, келе алмаймын">Өкінішке орай, келе алмаймын</option>
+                <option value="Yes">Қатысамын</option>
+                <option value="Yes + 1">Жұбайыммен барамын</option>
+                <option value="No">Өкінішке орай, келе алмаймын</option>
             </select>
             <button type="submit"
-                class="w-full bg-[#718975] py-2 rounded text-white tracking-widest font-bold font-['main'] hover:bg-[#61a46c] transition">
+                class="w-full bg-[#718975] py-2 rounded max-sm:text-sm text-white tracking-widest font-bold font-['main'] hover:bg-[#61a46c] transition">
                 ЖІБЕРУ
             </button>
         </form>
         <div class="my-10">
-            <h2 class="text-3xl font-['kz'] font-bold text-[#BC8958]">Келіңіздер, қуанышымыздың куәсі болыңыздар!</h2>
+            <h2 class="text-3xl max-sm:text-xl font-['kz'] font-bold text-[#BC8958]">Келіңіздер, қуанышымыздың куәсі болыңыздар!</h2>
         </div>
     </div>
 
