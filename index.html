@@ -18,11 +18,17 @@
 
         @keyframes rotateText {
             from {
-            transform: rotate(0deg);
+                transform: rotate(0deg);
             }
             to {
-            transform: rotate(360deg);
+                transform: rotate(360deg);
             }
+        }
+
+        .img {
+            background-image: url(/src/img/example.jpg);
+            background-position: 50% 50%;
+            background-size: cover;
         }
 
         .sound__block {
@@ -43,115 +49,146 @@
             cursor: pointer;
             z-index: 20;
         }
+
         .play-button:hover {
             color: #2c2c2c;
+        }
+
+        @media (max-width: 375px) {
+            .sound__block {
+                width: 120px;
+                height: 120px;
+            }
+
+            .play-button {
+                font-size: 30px;
+            }
+        }
+
+        @media (min-width: 376px) and (max-width: 768px) {
+            .sound__block {
+                width: 140px;
+                height: 140px;
+            }
+
+            .play-button {
+                font-size: 35px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .sound__block {
+                width: 160px;
+                height: 160px;
+            }
+
+            .play-button {
+                font-size: 40px;
+            }
+        }
+
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            .sound__block {
+                width: 180px;
+                height: 180px;
+            }
+
+            .play-button {
+                font-size: 45px;
+            }
+        }
+
+        @media (min-width: 1281px) {
+            .sound__block {
+                width: 200px;
+                height: 200px;
+            }
+
+            .play-button {
+                font-size: 50px;
+            }
         }
     </style>
 </head>
 <body>
-<!--     <div class="first__block flex flex-col md:flex-row max-md:flex-row relative w-full h-auto md:h-screen max-md:h-auto place-content-between items-center border-b-2 border-[#BC895A]">
-        <div class="left__block w-full md:w-[50%] max-md:w-auto grid grid-cols-2 md:grid-cols-2 max-md:grid-cols-1 grid-rows-2 md:grid-rows-2 max-md:grid-rows-4 ">
-            <img src="src/img/image.svg" class="w-full max-md:w-40">
-            <img src="src/img/image.svg" class="w-full max-md:w-40">
-            <img src="src/img/image.svg" class="w-full max-md:w-40">
-            <img src="src/img/image.svg" class="w-full max-md:w-40">
-        </div>
-        <div class="right__block flex flex-col w-full md:w-[50%] h-full md:h-auto place-content-center items-center text-center"> 
-            <span class="block absolute bottom-0 right-0 z-10">
-                <img class="rotate-180 max-md:w-35" src="src/img/flower.png" alt="flower">
-            </span>
-            <span class="block absolute bottom-10 right-130 z-10 max-md:bottom-15 max-md:right-55">
-                <img class="rotate-y-180 w-34 max-md:w-12" src="src/img/butterfly.png" alt="flower">
-            </span>
-            <span class="block absolute top-20 right-60 z-10 max-md:top-4 max-md:right-20">
-                <img class="rotate-y-0 w-20 max-md:w-10" src="src/img/butterfly.png" alt="flower">
-            </span>
-            <div class="text__block">
-                <div class="relative text-6xl md:text-5xl max-md:text-3xl text-[#BC8958] font-['kz'] mb-10 tracking-widest">
-                    Сұлтан - Меруерт
-                </div>
-                <div class="text-4xl md:text-3xl max-md:text-xl text-[#BC8958] pb-4 border-b-2">ҮЙЛЕНУ ТОЙЫ</div>
-                <div class="mt-2 text-4xl md:text-3xl max-md:text-xl text-[#BC8958]">10.08.2025</div>
-            </div>
-            <div class="sound__block">
-                <svg class="rotating-text max-md:w-[100px] max-md:h-[90px] max-md:-mt-1" width="160" height="140" viewBox="0 0 200 200">
-                    <defs>
-                        <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
-                    </defs>
-                    <text font-size="16" sm:font-size="12" font-family="Arial" fill="black" letter-spacing="2">
-                        <textPath href="#circlePath" startOffset="0%">
-                            Әуен • Әуен • Әуен • Әуен • Әуен • Әуен • Әуен • 
-                        </textPath>
-                    </text>
-                </svg>
-                <button class="play-button" onclick="toggleAudio()">
-                    <i id="play-icon" class="bi bi-play-circle-fill text-7xl max-md:text-5xl"></i>
-                </button>
-                <audio id="audio" src="src/audio/ambient-128950.mp3"></audio>
-            </div>
-        </div>
-    </div>   -->
-    <div class="first__block flex flex-col sm:flex-col md:flex-row relative w-full h-auto md:h-screen place-content-between items-center border-b-2 border-[#BC895A]">
-        <div class="left__block w-full sm:w-full md:w-[50%] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 grid-rows-2 sm:grid-rows-2 md:grid-rows-2">
-            <img src="src/img/image.svg" class="w-full sm:w-1/2 md:w-full">
-            <img src="src/img/image.svg" class="w-full sm:w-1/2 md:w-full">
-            <img src="src/img/image.svg" class="w-full sm:w-1/2 md:w-full">
-            <img src="src/img/image.svg" class="w-full sm:w-1/2 md:w-full">
+    <div class="first__block flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row relative w-full h-auto sm:h-auto md:h-screen lg:h-screen xl:h-screen 2xl:h-screen place-content-between items-center border-b-2 border-[#BC895A] px-2 sm:px-4">
+        <div class="left__block w-full sm:w-full md:w-[50%] lg:w-[50%] xl:w-[50%] 2xl:w-[50%] mt-2 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 grid-rows-2 sm:grid-rows-2 md:grid-rows-2 lg:grid-rows-2 xl:grid-rows-2 2xl:grid-rows-2 gap-2 sm:gap-4">
+            <div class="img rounded-2xl m-auto w-[140px] h-[140px] sm:w-[260px] sm:h-[260px] md:w-[160px] md:h-[160px] lg:w-[300px] lg:h-[300px]"></div>
+            <div class="img rounded-2xl m-auto w-[140px] h-[140px] sm:w-[260px] sm:h-[260px] md:w-[160px] md:h-[160px] lg:w-[300px] lg:h-[300px]"></div>
+            <div class="img rounded-2xl m-auto w-[140px] h-[140px] sm:w-[260px] sm:h-[260px] md:w-[160px] md:h-[160px] lg:w-[300px] lg:h-[300px]"></div>
+            <div class="img rounded-2xl m-auto w-[140px] h-[140px] sm:w-[260px] sm:h-[260px] md:w-[160px] md:h-[160px] lg:w-[300px] lg:h-[300px]"></div>
+            <!-- <img src="src/img/example.jpg" class="p-2 rounded-2xl w-full sm:w-[100px] md:w-full"> -->
         </div>
     
-        <div class="right__block flex flex-col w-full sm:w-full md:w-[50%] h-full md:h-auto place-content-center items-center text-center">
+        <div class="right__block flex flex-col w-full sm:w-full md:w-[50%] lg:w-[50%] xl:w-[50%] 2xl:w-[50%] h-full sm:h-auto md:h-auto lg:h-auto xl:h-auto 2xl:h-auto place-content-center items-center text-center mt-6 sm:mt-0">
             <span class="block absolute bottom-0 right-0 z-10">
-                <img class="rotate-180 w-32 sm:w-40 md:w-35" src="src/img/flower.png" alt="flower">
+                <img class="rotate-180 w-24 sm:w-32 md:w-36" src="src/img/flower.png" alt="flower">
             </span>
-            <span class="block absolute bottom-10 right-32 z-10 sm:bottom-20 sm:right-20 md:bottom-15 md:right-55">
-                <img class="rotate-y-180 w-16 sm:w-20 md:w-12" src="src/img/butterfly.png" alt="flower">
+    
+            <span class="block absolute bottom-8 right-20 sm:bottom-10 sm:right-28 md:bottom-15 md:right-55 lg:bottom-16 lg:right-60">
+                <img class="rotate-y-180 w-10 sm:w-14 md:w-18" src="src/img/butterfly.png" alt="butterfly">
             </span>
-            <span class="block absolute top-16 right-20 z-10 sm:top-10 sm:right-24 md:top-4 md:right-20">
-                <img class="rotate-y-0 w-12 sm:w-16 md:w-10" src="src/img/butterfly.png" alt="flower">
+    
+            <span class="hidden md:block absolute top-6 right-2 sm:top-10 sm:right-20 md:top-6 md:right-24">
+                <img class="rotate-y-0 w-8 sm:w-12 md:w-16" src="src/img/butterfly.png" alt="butterfly">
             </span>
     
             <div class="text__block">
-                <div class="relative text-4xl sm:text-5xl md:text-6xl text-[#BC8958] font-['kz'] mb-6 tracking-widest">
+                <div class="relative text-2xl sm:text-3xl md:text-5xl text-[#BC8958] font-['kz'] mb-4 tracking-widest">
                     Сұлтан - Меруерт
                 </div>
-                <div class="text-2xl sm:text-3xl md:text-4xl text-[#BC8958] pb-4 border-b-2">ҮЙЛЕНУ ТОЙЫ</div>
-                <div class="mt-2 text-2xl sm:text-3xl md:text-4xl text-[#BC8958]">10.08.2025</div>
+                <div class="text-base sm:text-xl md:text-3xl text-[#BC8958] pb-2 sm:pb-4 border-b-2">
+                    ҮЙЛЕНУ ТОЙЫ
+                </div>
+                <div class="mt-1 sm:mt-2 text-base sm:text-xl md:text-3xl text-[#BC8958]">
+                    10.08.2025
+                </div>
             </div>
     
             <div class="sound__block mt-4">
-                <svg class="rotating-text w-[90px] h-[90px] sm:w-[120px] sm:h-[110px] md:w-[160px] md:h-[140px]" viewBox="0 0 200 200">
+                <svg class="rotating-text w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] md:w-[140px] md:h-[140px]" viewBox="0 0 200 200">
                     <defs>
                         <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
                     </defs>
-                    <text font-size="12" sm:font-size="14" md:font-size="16" font-family="Arial" fill="black" letter-spacing="2">
+                    <text class="font-[Arial] fill-black" font-size="16" sm:font-size="16" md:font-size="16" letter-spacing="2">
                         <textPath href="#circlePath" startOffset="0%">
                             Әуен • Әуен • Әуен • Әуен • Әуен • Әуен • Әуен • 
                         </textPath>
                     </text>
                 </svg>
                 <button class="play-button mt-2" onclick="toggleAudio()">
-                    <i id="play-icon" class="bi bi-play-circle-fill text-5xl sm:text-6xl md:text-7xl"></i>
+                    <i id="play-icon" class="bi bi-play-circle-fill text-4xl sm:text-5xl md:text-7xl"></i>
                 </button>
                 <audio id="audio" src="src/audio/ambient-128950.mp3"></audio>
             </div>
         </div>
-    </div>
-    <div class="flex max-md:flex-col justify-between items-center p-10 w-full">
-        <div class="w-[52.5%] max-md:w-full font-['main'] text-center text-zinc-800">
-            <h2 class="text-4xl max-md:text-2xl mb-12 tracking-wider">ҚҰРМЕТТІ ҚОНАҚТАР!</h2>
-            <h2 class="text-2xl max-md:text-xl tracking-wider">СІЗДЕРДІ</h2>
-            <h1 class="w-full max-md:w-auto mx-auto text-center max-md:text-center text-4xl max-md:text-2xl -mt-6 max-md:-mt-4 mb-6 py-4 font-['kz'] tracking-widest text-[#BC8958] border-b-2">Сұлтан мен Меруерттің</h1>    
-            <p class="text-2xl max-md:text-xl w-[80%] max-md:w-full mx-auto tracking-wider">ҮЙЛЕНУ ТОЙЫНА АРНАЛҒАН САЛТАНАТТЫ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!</p>
+    </div>    
+    <div class="flex flex-col md:flex-row justify-between items-center p-10 w-full">
+        <!-- Левый блок -->
+        <div class="w-full md:w-[52.5%] font-['main'] text-center text-zinc-800">
+            <h2 class="text-4xl max-md:text-xl mb-12 tracking-wider">ҚҰРМЕТТІ ҚОНАҚТАР!</h2>
+            <h2 class="text-2xl max-md:text-lg tracking-wider">СІЗДЕРДІ</h2>
+            <h1 class="w-full mx-auto text-center text-4xl max-md:text-3xl -mt-6 max-md:-mt-4 mb-6 py-4 font-['kz'] tracking-widest text-[#BC8958] border-b-2">
+                Сұлтан мен Меруерттің
+            </h1>    
+            <p class="text-2xl max-md:text-lg w-[80%] max-md:w-full mx-auto tracking-wider">
+                ҮЙЛЕНУ ТОЙЫНА АРНАЛҒАН САЛТАНАТТЫ ДАСТАРХАНЫМЫЗДЫҢ ҚАДІРЛІ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!
+            </p>
             <div class="flex flex-col items-center justify-center font-['kz2'] mt-8">
-                <h3 class="text-3xl max-md:text-2xl">Той иелері:</h3>
-                <h2 class="text-4xl max-md:text-3xl font-['kz'] text-[#BC8958] mt-2 mb-6">Нұрсипат - Бибігүл</h2>
+                <h3 class="text-3xl max-md:text-xl">Той иелері:</h3>
+                <h2 class="text-4xl max-md:text-2xl font-['kz'] text-[#BC8958] mt-2 mb-6">Нұрсипат - Бибігүл</h2>
             </div>   
         </div>
-        <div class="flex max-md:flex-col flex-row items-center justify-center w-[60%] max-md:w-full">
-            <div class="flex flex-col items-center justify-center w-[50%] max-md:w-full max-md:mt-10">
-                <h3 class="text-2xl max-md:text-xl">ТОЙ САЛТАНАТЫ:</h3>
+    
+        <!-- Правый блок -->
+        <div class="flex flex-col md:flex-row justify-center items-start w-full md:w-[60%] mt-10 md:mt-0">
+    
+            <!-- Левая часть правого блока (дата + календарь) -->
+            <div class="flex flex-col items-center justify-center w-full md:w-[50%]">
+                <h3 class="text-2xl max-md:text-lg">ТОЙ САЛТАНАТЫ:</h3>
                 <h1 class="text-2xl max-md:text-xl font-['kz'] text-[#BC8958] border-b-2">10 тамыз 2025 жылы</h1>
-                <div class="grid grid-cols-1 grid-rows-6 gap-2 mt-8 max-md:text-xl">
+                <!-- Календарь -->
+                <div class="grid grid-cols-1 grid-rows-6 gap-2 mt-8 max-md:text-sm">
                     <div class="flex flex-row font-bold border-b-1 border-[#ddb07c]">
                         <span class="block text-center w-8">ДС</span>
                         <span class="block text-center w-8">СС</span>
@@ -162,21 +199,21 @@
                         <span class="block text-center w-8">ЖС</span>
                     </div>
                     <div class="flex flex-row">
-                        <span class="block text-center w-8 text-[transparent]">28</span>
-                        <span class="block text-center w-8 text-[transparent]">29</span>
-                        <span class="block text-center w-8 text-[transparent]">30</span>
-                        <span class="block text-center w-8 text-[transparent]">31</span>
+                        <span class="block text-center w-8 text-transparent">28</span>
+                        <span class="block text-center w-8 text-transparent">29</span>
+                        <span class="block text-center w-8 text-transparent">30</span>
+                        <span class="block text-center w-8 text-transparent">31</span>
                         <span class="block text-center w-8">1</span>
                         <span class="block text-center w-8">2</span>
                         <span class="block text-center w-8">3</span>
                     </div>
                     <div class="flex flex-row">
-                        <span class="block text-center pt-[0.2rem] w-8">4</span>
-                        <span class="block text-center pt-[0.2rem] w-8">5</span>
-                        <span class="block text-center pt-[0.2rem] w-8">6</span>
-                        <span class="block text-center pt-[0.2rem] w-8">7</span>
-                        <span class="block text-center pt-[0.2rem] w-8">8</span>
-                        <span class="block text-center pt-[0.2rem] w-8">9</span>
+                        <span class="block text-center w-8">4</span>
+                        <span class="block text-center w-8">5</span>
+                        <span class="block text-center w-8">6</span>
+                        <span class="block text-center w-8">7</span>
+                        <span class="block text-center w-8">8</span>
+                        <span class="block text-center w-8">9</span>
                         <span class="block text-center py-[0.1rem] px-[0.3rem] font-bold border-3 rounded-full border-[#ddb07c]">10</span>
                     </div>
                     <div class="flex flex-row">
@@ -208,14 +245,18 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col justify-center items-center w-[50%] max-md:w-full max-md:mt-10">
+    
+            <!-- Правая часть правого блока (время и отсчет) -->
+            <div class="flex flex-col items-center justify-center w-full md:w-[50%] mt-10 md:mt-0">
                 <div class="flex flex-col items-center justify-center font-['kz2']">
-                    <h3 class="text-2xl max-md:text-2xl">Басталуы:</h3>
-                    <h2 class="text-3xl max-md:text-2xl font-['kz'] text-[#BC8958] mt-2 mb-6">19:00 - де</h2>
+                    <h3 class="text-2xl max-md:text-xl">Басталуы:</h3>
+                    <h2 class="text-2xl font-['kz'] text-[#BC8958] mt-2 mb-6">19:00 - де</h2>
                     <h3 class="text-2xl max-md:text-xl text-center">Уақытылы келулеріңізді сұраймыз</h3>
                 </div>
+    
                 <div class="w-full">
-                    <svg class="mb-4 mt-12 w-full" width="100%" height="20" viewBox="95 5 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <!-- ВЕРХНЯЯ ЛИНИЯ -->
+                    <svg class="mb-4 mt-12 w-full" height="20" viewBox="95 5 10 10" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <linearGradient id="fadeLine1" x1="0%" y1="50%" x2="50%" y2="50%">
                                 <stop offset="0%" stop-color="#718975" stop-opacity="0" />
@@ -230,42 +271,33 @@
                         <ellipse cx="153" cy="10" rx="50" ry="1.5" fill="url(#fadeLine2)" />
                         <circle cx="100" cy="10" r="3" fill="#718975" />
                     </svg>
-                    
-
-                    <h2 class="text-center text-2xl max-md:text-xl font-['kz2'] mb-4">Той салтанатына дейін:</h2>
+    
+                    <!-- Таймер -->
+                    <h2 class="text-center text-2xl max-md:text-lg font-['kz2'] mb-4">Той салтанатына дейін:</h2>
                     <ul class="flex flex-row justify-center items-center font-['kz2']">
-                        <li class="flex flex-col justify-center items-center h-20">
-                            <span id="days" class="text-2xl max-md:text-xl pl-3 pr-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
-                            <span class="text-xl max-md:text-lg">күн</span>
+                        <li class="flex flex-col items-center">
+                            <span id="days" class="text-2xl max-md:text-sm px-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
+                            <span class="text-xl max-md:text-sm">күн</span>
                         </li>
-                        <li class="flex flex-col justify-start items-center h-30 pt-6 px-3 font-['main'] text-4xl max-md:text-3xl text-[#718975]">:</li>
-                        <li class="flex flex-col justify-center items-center">
-                            <span id="hours" class="text-2xl max-md:text-xl pl-3 pr-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
-                            <span class="text-xl max-md:text-lg">сағат</span>
+                        <li class="flex flex-col items-center pt-6 px-3 font-['main'] text-4xl max-md:text-2xl text-[#718975]">:</li>
+                        <li class="flex flex-col items-center">
+                            <span id="hours" class="text-2xl max-md:text-sm px-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
+                            <span class="text-xl max-md:text-sm">сағат</span>
                         </li>
-                        <li class="flex flex-col justify-start items-center h-30 pt-6 px-3 font-['main'] text-4xl max-md:text-3xl text-[#718975]">:</li>
-                        <li class="flex flex-col justify-center items-center">
-                            <span id="minutes" class="text-2xl max-md:text-xl pl-3 pr-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
-                            <span class="text-xl max-md:text-lg">минут</span>
+                        <li class="flex flex-col items-center pt-6 px-3 font-['main'] text-4xl max-md:text-2xl text-[#718975]">:</li>
+                        <li class="flex flex-col items-center">
+                            <span id="minutes" class="text-2xl max-md:text-sm px-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
+                            <span class="text-xl max-md:text-sm">минут</span>
                         </li>
-                        <li class="flex flex-col justify-start items-center h-30 pt-6 px-3 font-['main'] text-4xl max-md:text-3xl text-[#718975]">:</li>
-                        <li class="flex flex-col justify-center items-center">
-                            <span id="seconds" class="text-2xl max-md:text-xl pl-3 pr-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
-                            <span class="text-xl max-md:text-lg">секунд</span>
+                        <li class="flex flex-col items-center pt-6 px-3 font-['main'] text-4xl max-md:text-2xl text-[#718975]">:</li>
+                        <li class="flex flex-col items-center">
+                            <span id="seconds" class="text-2xl max-md:text-sm px-4 pb-3 rounded-full border-3 border-[#718975]">0</span>
+                            <span class="text-xl max-md:text-sm">секунд</span>
                         </li>
                     </ul>
-
-                    <svg class="my-4 w-full" width="100%" height="20" viewBox="95 5 10 10" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="fadeLine1" x1="0%" y1="50%" x2="50%" y2="50%">
-                                <stop offset="0%" stop-color="#718975" stop-opacity="0" />
-                                <stop offset="100%" stop-color="#718975" />
-                            </linearGradient>
-                            <linearGradient id="fadeLine2" x1="50%" y1="50%" x2="100%" y2="50%">
-                                <stop offset="0%" stop-color="#718975" />
-                                <stop offset="100%" stop-color="#718975" stop-opacity="0" />
-                            </linearGradient>
-                        </defs>
+    
+                    <!-- НИЖНЯЯ ЛИНИЯ -->
+                    <svg class="my-4 w-full" height="20" viewBox="95 5 10 10" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="47" cy="10" rx="50" ry="1.5" fill="url(#fadeLine1)" />
                         <ellipse cx="153" cy="10" rx="50" ry="1.5" fill="url(#fadeLine2)" />
                         <circle cx="100" cy="10" r="3" fill="#718975" />
@@ -273,7 +305,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>     
     <div class="w-full flex justify-center items-center">
         <span class="block w-full h-2 max-md:h-1 bg-[#718975] rounded-tr-sm rounded-br-sm"></span>
         <div class="w-[80%] flex justify-center items-center">
