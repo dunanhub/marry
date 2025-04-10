@@ -49,7 +49,7 @@
     </style>
 </head>
 <body>
-    <div class="first__block flex flex-col md:flex-row max-md:flex-row relative w-full h-auto md:h-screen max-md:h-auto place-content-between items-center border-b-2 border-[#BC895A]">
+<!--     <div class="first__block flex flex-col md:flex-row max-md:flex-row relative w-full h-auto md:h-screen max-md:h-auto place-content-between items-center border-b-2 border-[#BC895A]">
         <div class="left__block w-full md:w-[50%] max-md:w-auto grid grid-cols-2 md:grid-cols-2 max-md:grid-cols-1 grid-rows-2 md:grid-rows-2 max-md:grid-rows-4 ">
             <img src="src/img/image.svg" class="w-full max-md:w-40">
             <img src="src/img/image.svg" class="w-full max-md:w-40">
@@ -90,7 +90,52 @@
                 <audio id="audio" src="src/audio/ambient-128950.mp3"></audio>
             </div>
         </div>
-    </div>  
+    </div>   -->
+    <div class="first__block flex flex-col sm:flex-col md:flex-row relative w-full h-auto md:h-screen place-content-between items-center border-b-2 border-[#BC895A]">
+        <div class="left__block w-full sm:w-full md:w-[50%] grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 grid-rows-2 sm:grid-rows-2 md:grid-rows-2">
+            <img src="src/img/image.svg" class="w-full sm:w-1/2 md:w-full">
+            <img src="src/img/image.svg" class="w-full sm:w-1/2 md:w-full">
+            <img src="src/img/image.svg" class="w-full sm:w-1/2 md:w-full">
+            <img src="src/img/image.svg" class="w-full sm:w-1/2 md:w-full">
+        </div>
+    
+        <div class="right__block flex flex-col w-full sm:w-full md:w-[50%] h-full md:h-auto place-content-center items-center text-center">
+            <span class="block absolute bottom-0 right-0 z-10">
+                <img class="rotate-180 w-32 sm:w-40 md:w-35" src="src/img/flower.png" alt="flower">
+            </span>
+            <span class="block absolute bottom-10 right-32 z-10 sm:bottom-20 sm:right-20 md:bottom-15 md:right-55">
+                <img class="rotate-y-180 w-16 sm:w-20 md:w-12" src="src/img/butterfly.png" alt="flower">
+            </span>
+            <span class="block absolute top-16 right-20 z-10 sm:top-10 sm:right-24 md:top-4 md:right-20">
+                <img class="rotate-y-0 w-12 sm:w-16 md:w-10" src="src/img/butterfly.png" alt="flower">
+            </span>
+    
+            <div class="text__block">
+                <div class="relative text-4xl sm:text-5xl md:text-6xl text-[#BC8958] font-['kz'] mb-6 tracking-widest">
+                    Сұлтан - Меруерт
+                </div>
+                <div class="text-2xl sm:text-3xl md:text-4xl text-[#BC8958] pb-4 border-b-2">ҮЙЛЕНУ ТОЙЫ</div>
+                <div class="mt-2 text-2xl sm:text-3xl md:text-4xl text-[#BC8958]">10.08.2025</div>
+            </div>
+    
+            <div class="sound__block mt-4">
+                <svg class="rotating-text w-[90px] h-[90px] sm:w-[120px] sm:h-[110px] md:w-[160px] md:h-[140px]" viewBox="0 0 200 200">
+                    <defs>
+                        <path id="circlePath" d="M 100,100 m -75,0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+                    </defs>
+                    <text font-size="12" sm:font-size="14" md:font-size="16" font-family="Arial" fill="black" letter-spacing="2">
+                        <textPath href="#circlePath" startOffset="0%">
+                            Әуен • Әуен • Әуен • Әуен • Әуен • Әуен • Әуен • 
+                        </textPath>
+                    </text>
+                </svg>
+                <button class="play-button mt-2" onclick="toggleAudio()">
+                    <i id="play-icon" class="bi bi-play-circle-fill text-5xl sm:text-6xl md:text-7xl"></i>
+                </button>
+                <audio id="audio" src="src/audio/ambient-128950.mp3"></audio>
+            </div>
+        </div>
+    </div>
     <div class="flex max-md:flex-col justify-between items-center p-10 w-full">
         <div class="w-[52.5%] max-md:w-full font-['main'] text-center text-zinc-800">
             <h2 class="text-4xl max-md:text-2xl mb-12 tracking-wider">ҚҰРМЕТТІ ҚОНАҚТАР!</h2>
